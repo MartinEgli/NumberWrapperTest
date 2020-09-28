@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberWrapperTest", "NumberWrapperTest\NumberWrapperTest.csproj", "{F36577FF-35E6-4530-8AC3-0DEF76FA2C54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberWrapperTest", "NumberWrapperTest\NumberWrapperTest.csproj", "{F36577FF-35E6-4530-8AC3-0DEF76FA2C54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryTest", "MemoryTest\MemoryTest.csproj", "{252B24CD-C742-4A7B-82C5-6EC9B79CA1DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F36577FF-35E6-4530-8AC3-0DEF76FA2C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F36577FF-35E6-4530-8AC3-0DEF76FA2C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F36577FF-35E6-4530-8AC3-0DEF76FA2C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252B24CD-C742-4A7B-82C5-6EC9B79CA1DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252B24CD-C742-4A7B-82C5-6EC9B79CA1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252B24CD-C742-4A7B-82C5-6EC9B79CA1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252B24CD-C742-4A7B-82C5-6EC9B79CA1DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
