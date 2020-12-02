@@ -71,6 +71,11 @@ namespace NumberWrapperTest
             Value = d;
         }
 
+        public static implicit operator double(StructDouble input)
+        {
+            return input.Value;
+        }
+
         public static StructDouble operator +(StructDouble a)
         {
             return a;

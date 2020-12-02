@@ -169,6 +169,28 @@ namespace NumberWrapperTest
 
 
 
+            Console.WriteLine("Struct Double AggressiveInlining Verschachtelung");
+            stopwatch.Start();
+
+            for (var i = 0; i < layerloops; i++)
+            {
+                var si = new StructDoubleAggressiveInlining(i);
+                for (var j = 0; j < layerloops; j++)
+                {
+                    var sj = new StructDoubleAggressiveInlining(j);
+                    for (var k = 0; k < layerloops; k++)
+                    {
+                        var sk = new StructDoubleAggressiveInlining(k);
+                        var x = si + sj + sk;
+                    }
+                }
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds.ToString());
+            stopwatch.Reset();
+
+
+
             Console.WriteLine("Struct Double calc with values");
             stopwatch.Start();
             for (var i = 0; i < loops; i++)
@@ -193,6 +215,67 @@ namespace NumberWrapperTest
                     {
                         var sk = new StructDouble(k);
                         var x = new StructDouble( si.Value + sj.Value + sk.Value);
+                    }
+                }
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds.ToString());
+            stopwatch.Reset();
+
+            Console.WriteLine("Struct Double AggressiveInlining with values Verschachtelung");
+            stopwatch.Start();
+
+            for (var i = 0; i < layerloops; i++)
+            {
+                var si = new StructDoubleAggressiveInlining(i);
+                for (var j = 0; j < layerloops; j++)
+                {
+                    var sj = new StructDoubleAggressiveInlining(j);
+                    for (var k = 0; k < layerloops; k++)
+                    {
+                        var sk = new StructDoubleAggressiveInlining(k);
+                        var x = new StructDoubleAggressiveInlining(si.Value + sj.Value + sk.Value);
+                    }
+                }
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds.ToString());
+            stopwatch.Reset();
+
+            Console.WriteLine("Struct Double with first value Verschachtelung");
+            stopwatch.Start();
+
+            for (var i = 0; i < layerloops; i++)
+            {
+                var si = new StructDouble(i);
+                for (var j = 0; j < layerloops; j++)
+                {
+                    var sj = new StructDouble(j);
+                    for (var k = 0; k < layerloops; k++)
+                    {
+                        var sk = new StructDouble(k);
+                        var x = new StructDouble(si.Value + sj + sk);
+                    }
+                }
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds.ToString());
+            stopwatch.Reset();
+
+
+            Console.WriteLine("Struct Double implicit cast with values Verschachtelung");
+            stopwatch.Start();
+
+            for (var i = 0; i < layerloops; i++)
+            {
+                var si = new StructDouble(i);
+                for (var j = 0; j < layerloops; j++)
+                {
+                    var sj = new StructDouble(j);
+                    for (var k = 0; k < layerloops; k++)
+                    {
+                        var sk = new StructDouble(k);
+                        var x = new StructDouble((double)si + sj + sk);
                     }
                 }
             }
